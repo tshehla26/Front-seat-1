@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+.app {
+  min-height: 100vh;
+}
+
+.app-header {
+  padding: 2rem 0;
+  background-color: #212529;
+  color: white;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-weight: 700;
+}
+
+.app-header p {
+  margin: 0.25rem 0 0;
+  opacity: 0.75;
+}
+
+.app-card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.payment-title {
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.payment-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.payment-details div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.payment-details span {
+  color: #6c757d;
+  font-size: 0.85rem;
+}
+
+.payment-details strong {
+  font-size: 1.05rem;
+}
+
+.empty-state {
+  background-color: white;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  color: #6c757d;
+}
+
+.empty-state p {
+  margin: 0;
+}
+
+.change-total {
+  font-size: 1.25rem;
+}
+
+.change-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.change-row:last-child {
+  border-bottom: none;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.summary-item span {
+  color: #6c757d;
+  font-size: 0.85rem;
+}
+
+.summary-item strong {
+  font-size: 1.2rem;
+}
+
+.driver-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid #dee2e6;
+}
+
+.driver-total strong {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .payment-details {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .app-header {
+    padding: 1.5rem 0;
+  }
+
+  .summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .payment-details {
+    grid-template-columns: 1fr;
+  }
+
+  .change-row {
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .driver-total {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+
